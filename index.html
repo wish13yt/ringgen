@@ -5,10 +5,13 @@
     <div id="div1">
 
     </div>
+    <div id="div2">
+
+    </div>
 <form onsubmit="generateCode(); return false;">
     <label>Enter your username:</label>
     <input type="text" id="username" name="username">
-    <button type="submit">Generate!</button>
+    <button type="submit" id="dabutton">Generate!</button>
 </form>
 <script>
             function generateCode() {
@@ -23,6 +26,11 @@
   var code3 = "[url=https://bioring.pages.dev/webring?page=@" + user + "&direction=fwd][img]https://bioring.pages.dev/pkringfw.png[/img][/url]"
   var gen = document.createElement("p");
   div1.innerHTML += code3;
+  var copynotice = "Copy the text above into your Pikidiary bio!"
+  var gen2 = document.createElement("h2")
+  div2.innerHTML += copynotice;
+  document.getElementById("dabutton").disabled = true;
+  document.getElementById("username").disabled = true;
             } else {
                 alert("Please enter a username!");
             }
